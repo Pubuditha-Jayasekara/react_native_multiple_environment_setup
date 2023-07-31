@@ -348,4 +348,22 @@ Yarn android:prod-release
    <div align="center">
             <img width="1200" alt="Screenshot 2023-07-31 at 2 26 08 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6839750a-9866-4ed0-9578-bceb0633387a">
    </div>
+
+8. Finally Update the info.plist for grabbing suitable values from each configuration as follows.
+
+   Bundle display name -> $(PRODUCT_NAME)
+   
+   Executable file -> $(EXECUTABLE_NAME)
+   
+   Bundle identifier -> $(PRODUCT_BUNDLE_IDENTIFIER)
+   
+   Bundle name -> $(PRODUCT_NAME)
+   
+   Bundle version string (short) -> $(APP_VERSION)
+   
+   Bundle version -> $(BUILD_NUMBER)
+
+      <div align="center">
+         <img width="1168" alt="Screenshot 2023-07-31 at 2 31 01 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/b0c108cd-6673-40a3-adf9-0891c6de3ad0">
+      </div>
       
