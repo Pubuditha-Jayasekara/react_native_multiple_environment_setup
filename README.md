@@ -34,4 +34,13 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
   <img width="246" alt="Screenshot 2023-07-31 at 10 02 36 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/e4527a80-bc33-4207-8e54-f46ac6c04d33">
 </div>
 
-4. 
+4. Update each .env file to contain following details.
+
+   ```
+   APP_VERSION="1.0"
+   BUILD_NUMBER=9
+   ```
+   <div align="center">
+      <img width="1013" alt="Screenshot 2023-07-31 at 10 11 18 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/17171cdd-e8fb-48cf-8d1c-908402c68593">
+   </div>
+
