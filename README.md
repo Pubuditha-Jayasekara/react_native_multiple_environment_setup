@@ -354,7 +354,8 @@ Yarn android:prod-release
   "${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb" "${SRCROOT}/.." "${SRCROOT}/tmp.xcconfig"
   ```
 
-**Make sure to cahnge '.env.prod' to match your env file. For ex: .env.dev or .env.qa etc.**
+  **Make sure to cahnge '.env.prod' to match your env file. For ex: .env.dev or .env.qa etc.**
+
   ```
   cp "${PROJECT_DIR}/../.env.prod" "${PROJECT_DIR}/../.env"
   ```
@@ -363,7 +364,7 @@ Yarn android:prod-release
 - It is required to set a valid target to the 'Provide build settings from' drop down menue. You can simply add your target name there.
 
     <div align="center">
-      ![Uploading Screenshot 2023-07-31 at 4.34.49 PM.png…]()
+       <img width="939" alt="Screenshot 2023-07-31 at 4 34 49 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/847c45f8-b53c-40a0-b909-2b6dbcc031c0">
    </div>
 
 
