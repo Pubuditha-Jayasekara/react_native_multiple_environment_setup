@@ -314,18 +314,27 @@ Yarn android:prod-release
 
 4. Update the bundle identifiers for each schema.
 
-   - Select project name -> TARGETS -> App Name -> Build Settings -> search for word ‘identifier’.
+   - Select project name -> TARGETS -> App Name -> Build Settings -> search for word ‘**identifier**’.
+     
    - This will give you something called ‘Packaging’ inside that you can find the product bundle identifiers. Select each scheme name and give the appropriate bundle identifier for each.
   
      <div align="center">
         <img width="1195" alt="Screenshot 2023-07-31 at 1 41 06 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/96b19975-4fa7-411a-8f52-3ec43968c663">   
      </div>
 
-<div align="center">
-     <img width="632" alt="Screenshot 2023-07-31 at 1 47 10 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/0582738e-62df-4cc1-a049-0f8776d89d86">
-</div>
+      <div align="center">
+           <img width="632" alt="Screenshot 2023-07-31 at 1 47 10 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/0582738e-62df-4cc1-a049-0f8776d89d86">
+      </div>
 
+5. Update the bundle name for each schema.
 
+   - Select project name -> TARGETS -> App Name -> Build Settings -> search for word '**bundle**'.
+
+   - This will give you something called ‘Info.plist Values’ inside that you can find the Bundle Display Name. You can select each schema name from the drop down and change the display name accordingly. This will be the app name that shows after installing.
+
+      <div align="center">
+           <img width="1192" alt="Screenshot 2023-07-31 at 2 00 01 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/0fcc8938-ecc6-46c2-9abf-9e2bb929665c">
+      </div>
    
 
    
