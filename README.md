@@ -144,29 +144,41 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
      <img width="777" alt="Screenshot 2023-07-31 at 10 46 45 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6e732727-efa0-4982-a11f-cab33ab59466">
    </div>
 
+**Important**
+
+10. You have to provide a valid flavorDimensions once you add the productFlavors. To achive this you can place the following code inside buildTypes{} before the debug{} and release{} code segments.
+
+    ```
+      //MARK: set flavour dimension 
+      flavorDimensions "default"
+    ```
+
+    <div align="center">
+       <img width="804" alt="Screenshot 2023-07-31 at 11 23 09 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/a98853a1-2cff-4fd2-bf1b-a4972cf23fba">
+   </div>
+
 📄 **Manage Multiple Google-Services.Json configurations:**
 
 If you have multiple google-services.json files: you need to add following code after adding product flavors code in ‘build.gradle’ file as follows. This also needs to be inside the  ‘android{}’ section.
 
    ```
-       // applicationVariants are e.g. debug, release
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    // For each separate APK per architecture, set a unique version code as described here:
-                    // https://developer.android.com/studio/build/configure-apk-splits.html
-                    // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
-                    def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
-                    def abi = output.getFilter(OutputFile.ABI)
-                    if (abi != null) {  // null for the universal-debug, universal-release variants
-                        output.versionCodeOverride =
-                                defaultConfig.versionCode * 1000 + versionCodes.get(abi)
-                    }
-                }
+        //MARK: to handle google service.json per each product flavor
+        applicationVariants.all { variant ->
+            variant.productFlavors.each { flavor ->
+                // Get the flavor-specific `google-services.json` file path
+                def googleServicesJsonPath = "src/${flavor.name}/res/raw/${flavor.name}.json"
+
+                variant.registerGeneratedResFolders(files(googleServicesJsonPath))
+
+                // Apply the `google-services` plugin with the flavor-specific file
+                variant.buildConfigField "String", "GOOGLE_SERVICES_JSON_FILE", "\"${googleServicesJsonPath}\""
+                variant.resValue "string", "google_services_json_file", googleServicesJsonPath
             }
+        }
    ```
 
    <div align="center">
-         <img width="1201" alt="Screenshot 2023-07-31 at 10 52 07 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f79b85fa-35e3-4c15-b4ff-aa88b043701b">
+      <img width="1275" alt="Screenshot 2023-07-31 at 11 37 28 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f55535d4-d28f-43ab-a885-af80fb93ac2e">
    </div>
 
 **Important**
