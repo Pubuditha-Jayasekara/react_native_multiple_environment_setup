@@ -262,6 +262,41 @@ Yarn android:prod-release
 
 📱 **iOS Configuration:**
 
+
+📦 **react-native-config Package Configuration:**
+
+1. Create Config.xconfig file in xcode project root.
+
+   - Right click on project name -> new file
+
+   <div align="center">
+      <img width="257" alt="Screenshot 2023-07-31 at 2 55 40 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/267088bb-1e44-4e5c-be73-a6b5e628c1a7">
+   </div>
+
+   - Search for word "**config**" -> select configurations settings file
+     
+    <div align="center">
+      <img width="730" alt="Screenshot 2023-07-31 at 2 55 53 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/2fbcf53c-394f-4c14-8ee1-f0561c26d91f">
+   </div>
+
+   - Set target -> select create
+     
+    <div align="center">
+       <img width="654" alt="Screenshot 2023-07-31 at 2 56 04 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/229902f0-de14-4f45-93d4-8fdc7b9be568">
+   </div>
+
+   - Add the following code inside the 'Config.xconfig' file
+  
+     ```
+     #include? "tmp.xcconfig"
+     ```
+
+      <div align="center">
+         <img width="766" alt="Screenshot 2023-07-31 at 2 55 07 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/922a1502-6aa6-4adf-b4a6-4e63adb9da6c">
+      </div>
+
+💻 **XCode Configuration:**
+
 1. First we need to add new build configurations.
 
    *Select project name -> goto info tab -> select configurations.
