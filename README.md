@@ -212,22 +212,35 @@ For example, the google-service.json file inside the dev folder should be rename
    ```
       
 *Dev Release:
+
    ```
       Yarn android:dev-release
    ```
+
 *Qa Debug:
+
    ```
       yarn android:qa
    ```
+
 *Qa Release:
+
    ```
       Yarn android:qa-release
    ```
+
 *Prod Debug:
+
    ```
       yarn android:prod
    ```
+
 *Prod Release:
+
    ```
       Yarn android:prod-release
    ```
+
+
+
+
