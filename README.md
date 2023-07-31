@@ -318,12 +318,8 @@ Yarn android:prod-release
      
    - This will give you something called ‘Packaging’ inside that you can find the product bundle identifiers. Select each scheme name and give the appropriate bundle identifier for each.
   
-     <div align="center">
-        <img width="1195" alt="Screenshot 2023-07-31 at 1 41 06 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/96b19975-4fa7-411a-8f52-3ec43968c663">   
-     </div>
-
-      <div align="center">
-           <img width="632" alt="Screenshot 2023-07-31 at 1 47 10 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/0582738e-62df-4cc1-a049-0f8776d89d86">
+       <div align="center">
+         <img width="969" alt="Screenshot 2023-07-31 at 2 23 31 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/d4519b07-8233-475c-a262-1ef650fbfb6c">
       </div>
 
 5. Update the bundle name for each schema.
@@ -332,9 +328,24 @@ Yarn android:prod-release
 
    - This will give you something called ‘Info.plist Values’ inside that you can find the Bundle Display Name. You can select each schema name from the drop down and change the display name accordingly. This will be the app name that shows after installing.
 
-      <div align="center">
-           <img width="1192" alt="Screenshot 2023-07-31 at 2 00 01 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/0fcc8938-ecc6-46c2-9abf-9e2bb929665c">
+     <div align="center">
+         <img width="1192" alt="Screenshot 2023-07-31 at 2 00 01 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/87d02f06-3c73-4823-9111-be702f8688c5">
       </div>
-   
+ 
 
-   
+6. You have to double check if the given display names are configured correctly.
+
+   - Select project name -> TARGETS ->App Name -> General -> Display name -> click on arrow or three dots.
+
+   - This will open ‘Display Name’ popup and you can add or verify the given display names for each schema.
+
+       <div align="center">
+          <img width="1130" alt="Screenshot 2023-07-31 at 2 06 51 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/d2f8f80f-711a-43a9-91d2-c59855b33597">
+      </div>
+
+7. You can double check the Bundle Identifiers also in the same way.
+
+   <div align="center">
+            <img width="1200" alt="Screenshot 2023-07-31 at 2 26 08 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6839750a-9866-4ed0-9578-bceb0633387a">
+   </div>
+      
