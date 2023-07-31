@@ -298,13 +298,19 @@ Yarn android:prod-release
 
    c. Just make sure that schema that you duplicate is “shared”  and has the right build configuration reference in Run and Archive .
 
+   *Goto‘Run’ -> info tab -> build configuration. From this drop down please select the suitable debug build configuration where you add in the first step. See the image below.
+   
    <div align="center">
       <img width="934" alt="Screenshot 2023-07-31 at 1 16 49 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/9554b789-406d-4dd8-8ec4-a3c06dc0c5f6">
    </div>
 
+ *Goto‘Archive’ -> build configuration. From this drop down please select the suitable release build configuration where you add in the first step. See the image below.
+ 
 <div align="center">
    <img width="943" alt="Screenshot 2023-07-31 at 1 23 58 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/66575181-3a64-44b2-9bc3-442b7962d722">
 </div>
+
+   d.  
 
    
 
