@@ -189,14 +189,14 @@ For example, the google-service.json file inside the dev folder should be rename
 **Let's Run Each Flavour**
 
  1. Update the ‘package.json’ file with following code to reflect the changes and run each environment using yarn/npm.
-
-    ```
-       "android:dev": "react-native run-android --variant=devDebug --appId com.daily.dailydev",
-       "android:dev-release": "react-native run-android --variant=devRelease --appId com.daily.dailydev",
-       "android:qa": "react-native run-android --variant=qaDebug --appId com.daily.dailyqa",
-       "android:qa-release": "react-native run-android --variant=qaRelease --appId com.daily.dailyqa",
-       "android:prod": "react-native run-android --variant=prodDebug --appId com.daily.dailyprod",
-       "android:prod-release": "react-native run-android --variant=prodRelease --appId com.daily.dailyprod"
+   
+   ```
+          "android:dev": "react-native run-android --variant=devDebug --appId com.daily.dailydev",
+          "android:dev-release": "react-native run-android --variant=devRelease --appId com.daily.dailydev",
+          "android:qa": "react-native run-android --variant=qaDebug --appId com.daily.dailyqa",
+          "android:qa-release": "react-native run-android --variant=qaRelease --appId com.daily.dailyqa",
+          "android:prod": "react-native run-android --variant=prodDebug --appId com.daily.dailyprod",
+          "android:prod-release": "react-native run-android --variant=prodRelease --appId com.daily.dailyprod"
    ```
 
    <div align="center">
@@ -205,42 +205,41 @@ For example, the google-service.json file inside the dev folder should be rename
 
 2. In order to run each environment you can use the command ‘yarn android:dev’ etc.
 
-*Dev Debug:
+**Dev Debug:**
 
-   ```
-         yarn android:dev
-   ```
+```
+yarn android:dev
+```
       
-*Dev Release:
+**Dev Release:**
 
-   ```
-      Yarn android:dev-release
-   ```
+```
+Yarn android:dev-release
+```
 
-*Qa Debug:
+**Qa Debug:**
 
-   ```
-      yarn android:qa
-   ```
+```
+yarn android:qa
+```
 
-*Qa Release:
+**Qa Release:**
 
-   ```
-      Yarn android:qa-release
-   ```
+```
+Yarn android:qa-release
+```
 
-*Prod Debug:
+**Prod Debug:**
 
-   ```
-      yarn android:prod
-   ```
+```
+yarn android:prod
+```
 
-*Prod Release:
+**Prod Release:**
 
-   ```
-      Yarn android:prod-release
-   ```
-
+```
+Yarn android:prod-release
+```
 
 
 
