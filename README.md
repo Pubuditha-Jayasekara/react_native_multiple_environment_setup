@@ -181,7 +181,7 @@ If you have multiple google-services.json files: you need to add following code 
       <img width="1275" alt="Screenshot 2023-07-31 at 11 37 28 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f55535d4-d28f-43ab-a885-af80fb93ac2e">
    </div>
 
-**Important**
+🛎️ **Important**
 
 Once you update multiple google-service.json handling part in app.gradle, you need to update the android folder structure to match each json file for each environment like follows.
 
@@ -262,7 +262,6 @@ Yarn android:prod-release
 
 📱 **iOS Configuration:**
 
-
 📦 **react-native-config Package Configuration:**
 
 1. Create Config.xconfig file in xcode project root.
@@ -330,7 +329,6 @@ Yarn android:prod-release
       <img width="941" alt="Screenshot 2023-07-31 at 1 10 12 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/4ebee4d9-ca76-418a-8202-0c6a645ee212">
    </div>
 
-
    c. Just make sure that schema that you duplicate is “shared”  and has the right build configuration reference in Run and Archive .
 
 - Goto‘Run’ -> info tab -> build configuration. From this drop down please select the suitable debug build configuration where you add in the first step. See the image below.
@@ -339,11 +337,35 @@ Yarn android:prod-release
       <img width="934" alt="Screenshot 2023-07-31 at 1 16 49 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/9554b789-406d-4dd8-8ec4-a3c06dc0c5f6">
    </div>
 
-- Goto‘Archive’ -> build configuration. From this drop down please select the suitable release build configuration where you add in the first step. See the image below.
+- Goto ‘Archive’ -> build configuration. From this drop down please select the suitable release build configuration where you add in the first step. See the image below.
  
 <div align="center">
    <img width="943" alt="Screenshot 2023-07-31 at 1 23 58 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/66575181-3a64-44b2-9bc3-442b7962d722">
 </div>
+
+- Add the pre build scripts to communicate with .env file and properly work with react-native-config package we added
+
+  <div align="center">
+   <img width="934" alt="Screenshot 2023-07-31 at 4 35 09 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/2753da89-0e45-4473-a66c-644689c4b21d">
+   </div>
+- Each pre build scripts need to contain following scripts
+
+  ```
+  "${SRCROOT}/../node_modules/react-native-config/ios/ReactNativeConfig/BuildXCConfig.rb" "${SRCROOT}/.." "${SRCROOT}/tmp.xcconfig"
+  ```
+
+**Make sure to cahnge '.env.prod' to match your env file. For ex: .env.dev or .env.qa etc.**
+  ```
+  cp "${PROJECT_DIR}/../.env.prod" "${PROJECT_DIR}/../.env"
+  ```
+
+🛎️ **Important**
+- It is required to set a valid target to the 'Provide build settings from' drop down menue. You can simply add your target name there.
+
+    <div align="center">
+      ![Uploading Screenshot 2023-07-31 at 4.34.49 PM.png…]()
+   </div>
+
 
    d. You have to repeat step 2 and 3 until you create all the schemas you need (dev, prod and qa).
 
