@@ -168,3 +168,21 @@ If you have multiple google-services.json files: you need to add following code 
    <div align="center">
          <img width="1201" alt="Screenshot 2023-07-31 at 10 52 07 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f79b85fa-35e3-4c15-b4ff-aa88b043701b">
    </div>
+
+**Important**
+
+Once you update multiple google-service.json handling part in app.gradle, you need to update the android folder structure to match each json file for each environment like follows.
+
+   1. Open your Android project folder.
+   2. Navigate to the ‘src’ folder inside the project/android/app.
+   3. Inside the ‘src’ folder, create three new folders: qa, dev, and prod.
+   4. Inside each of the newly created qa, dev, and prod folders, create a folder named ‘res’. 
+   5. Now, within each res folder (inside qa, dev, and prod), create a folder named ‘raw’. This raw folder will be used to store the google-service.json files for each environment.
+   6. Finally, you need to add the appropriate google-service.json file to each raw folder. Make sure you rename each file to match its respective environment. 
+
+For example, the google-service.json file inside the dev folder should be renamed to dev.json. Similarly, rename the files in the other folders also.
+
+   <div align="center">
+        <img width="299" alt="Screenshot 2023-07-31 at 11 00 02 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6b6f0735-489c-4128-880d-2a49a59224ee">
+   </div>
+
