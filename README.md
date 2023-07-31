@@ -27,6 +27,8 @@ Have an existing React Native project ready. If you don't have one yet, create a
 You can find the package on GitHub [here](https://github.com/luggit/react-native-config). The react-native-config package allows you to efficiently manage environment-specific configurations in your React Native project, making it simpler to handle different builds with varying settings.
 
 3. Create separate “**.env**” files for desired environments in the project root directory. In mine I have ‘**.env.dev**’ for **development configuration**, ‘**.env.prod**’ for **production configuration** and ‘**.env.qa**’ for **qa testing configurations**.
+
+  * EX path for ‘.env.dev’ : projectName/.env.dev
    
 <div align="center">
   <img width="246" alt="Screenshot 2023-07-31 at 10 02 36 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/e4527a80-bc33-4207-8e54-f46ac6c04d33">
