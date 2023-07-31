@@ -258,3 +258,21 @@ Yarn android:prod-release
    <div align="center">
    <img width="360" alt="Screenshot 2023-07-31 at 11 47 05 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/14d69bf3-c638-4691-a74c-f3fa8bfe1420">
    </div>
+
+
+📱 **iOS Configuration:**
+
+1. First we need to add new build configurations.
+
+Select project name -> goto info tab -> select configurations.
+
+   <div align="center">
+      <img width="1150" alt="Screenshot 2023-07-31 at 12 51 48 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/ebe248e3-9973-4de6-8ff2-69d91bf79319">
+   </div>
+
+2. Click on the plus sign below in ‘**Configurations**’ and select ‘**Duplicate Debug Configuration**’ for debug builds and ‘**Duplicate Release Configuration**’ for release builds and rename it to match your desired schemas.
+
+   <div align="center">
+      <img width="725" alt="Screenshot 2023-07-31 at 12 57 14 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/5f2c0596-295e-4bf5-afdf-c304d7e1f4a6">
+      <img width="798" alt="Screenshot 2023-07-31 at 12 59 40 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/bdd3cada-d6a0-4f98-9202-afebba3ee4b3">
+   </div>
