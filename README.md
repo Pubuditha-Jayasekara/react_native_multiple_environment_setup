@@ -1,4 +1,4 @@
-<img width="941" alt="Screenshot 2023-07-31 at 1 10 12 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/cf868325-1f87-49ed-8c0c-3a0e04272960">🚀 **React Native Multiple Environment configuration (Android & IOS)**
+🚀 **React Native Multiple Environment configuration (Android & IOS)**
 
 Many times when developing an application, we developers need to create different builds with different configurations. Facilitating the maintenance and testing process. Usually 3 different builds are created: development, staging and production.  
 
