@@ -253,5 +253,8 @@ yarn android:prod
 Yarn android:prod-release
 ```
 
+**Once you run each falvour there should be three different apps installed like below.**
 
-
+   <div align="center">
+   <img width="360" alt="Screenshot 2023-07-31 at 11 47 05 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/14d69bf3-c638-4691-a74c-f3fa8bfe1420">
+   </div>
