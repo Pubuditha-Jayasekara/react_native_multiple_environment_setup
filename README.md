@@ -185,4 +185,49 @@ For example, the google-service.json file inside the dev folder should be rename
    <div align="center">
         <img width="299" alt="Screenshot 2023-07-31 at 11 00 02 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6b6f0735-489c-4128-880d-2a49a59224ee">
    </div>
+   
+**Let's Run Each Flavour**
 
+ 1. Update the ‘package.json’ file with following code to reflect the changes and run each environment using yarn/npm.
+
+    ```
+       "android:dev": "react-native run-android --variant=devDebug --appId com.daily.dailydev",
+       "android:dev-release": "react-native run-android --variant=devRelease --appId com.daily.dailydev",
+       "android:qa": "react-native run-android --variant=qaDebug --appId com.daily.dailyqa",
+       "android:qa-release": "react-native run-android --variant=qaRelease --appId com.daily.dailyqa",
+       "android:prod": "react-native run-android --variant=prodDebug --appId com.daily.dailyprod",
+       "android:prod-release": "react-native run-android --variant=prodRelease --appId com.daily.dailyprod"
+   ```
+
+   <div align="center">
+       <img width="1169" alt="Screenshot 2023-07-31 at 11 06 42 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/b041fad6-7b41-42c1-9b21-a45d027ec9d5">
+   </div>
+
+2. In order to run each environment you can use the command ‘yarn android:dev’ etc.
+
+*Dev Debug:
+
+   ```
+         yarn android:dev
+   ```
+      
+*Dev Release:
+   ```
+      Yarn android:dev-release
+   ```
+*Qa Debug:
+   ```
+      yarn android:qa
+   ```
+*Qa Release:
+   ```
+      Yarn android:qa-release
+   ```
+*Prod Debug:
+   ```
+      yarn android:prod
+   ```
+*Prod Release:
+   ```
+      Yarn android:prod-release
+   ```
