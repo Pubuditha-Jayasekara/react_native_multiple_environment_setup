@@ -44,3 +44,127 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
       <img width="1013" alt="Screenshot 2023-07-31 at 10 11 18 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/17171cdd-e8fb-48cf-8d1c-908402c68593">
    </div>
 
+5. Go to the app level ‘build.gradle’ file in "/your project directory/android/app/build.gradle"
+
+   <div align="center">
+     <img width="1221" alt="Screenshot 2023-07-31 at 10 14 43 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/c5eca926-d552-4363-9bad-943b4cc84aeb">
+   </div>
+
+6. Add the following environment configurations at the very top of the ‘build.gradle’ file but below the apply plugin: "com.android.application" , apply plugin: "com.facebook.react" and import com.android.build.OutputFile lines.
+
+   ```
+         //MARK: to handle each environment .env file
+         project.ext.envConfigFiles = [
+             devDebug: ".env.dev",
+             devRelease: ".env.dev",
+             qaRelease: ".env.qa",
+             qaDebug: ".env.qa",
+             prodRelease: ".env.prod",
+             prodDebug: ".env.prod"
+         ]
+   ```
+
+   <div align="center">
+      <img width="863" alt="Screenshot 2023-07-31 at 10 26 23 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/d6f91f50-78d5-4643-8fff-b6c80c2f8978">
+   </div>
+   
+7. Next add the following line below the ‘project.ext.envConfigFiles‘ configuration.
+
+   ```
+      apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+   ```
+   
+   <div align="center">
+      <img width="1037" alt="Screenshot 2023-07-31 at 10 29 17 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/4f121d33-452e-4a4d-8018-f30ceb62b358">
+   </div>
+
+8. Add the product flavors inside the ‘android{} ‘ below the ‘buildTypes{}’ in ‘build.gradle’ file.
+
+   ```
+        //MARK: to handle each environment flavor
+        productFlavors {
+            dev {
+                dimension "default"
+                minSdkVersion rootProject.ext.minSdkVersion
+                applicationId 'com.daily.dailydev'
+                targetSdkVersion rootProject.ext.targetSdkVersion
+                resValue "string", "build_config_package", "com.daily"
+                resValue "string", "app_name" , "Daily Dev"
+                versionCode project.env.get("BUILD_NUMBER").toInteger()
+                versionName project.env.get("APP_VERSION")
+            }
+            qa {
+                dimension "default"
+                minSdkVersion rootProject.ext.minSdkVersion
+                applicationId 'com.daily.dailyqa'
+                targetSdkVersion rootProject.ext.targetSdkVersion
+                resValue "string", "build_config_package", "com.daily" 
+                resValue "string", "app_name" , "Daily Qa"
+                versionCode project.env.get("BUILD_NUMBER").toInteger()
+                versionName project.env.get("APP_VERSION")
+            }
+            prod {
+                dimension "default"
+                minSdkVersion rootProject.ext.minSdkVersion
+                applicationId 'com.daily.dailyprod'
+                targetSdkVersion rootProject.ext.targetSdkVersion
+                resValue "string", "build_config_package", "com.daily" 
+                resValue "string", "app_name" , "Daily Prod"
+                versionCode project.env.get("BUILD_NUMBER").toInteger()
+                versionName project.env.get("APP_VERSION")
+            }
+        }
+   ```
+
+   <div align="center">
+      <img width="1123" alt="Screenshot 2023-07-31 at 10 39 22 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/14e30996-4882-45a3-a89f-7e92561c5c85">
+   </div>
+
+🪚 **Let's break down the code:**
+
+- **productFlavors**: This is a section that defines multiple product flavors, each representing a different environment configuration.
+
+- **dev**: This flavor represents the development environment. It specifies the following configurations:
+    - `dimension "default"`: This sets the flavor dimension to "default."
+    - `minSdkVersion rootProject.ext.minSdkVersion`: Sets the minimum SDK version for this flavor, which is retrieved from a variable defined in the root project's gradle.properties.
+    - `applicationId 'com.daily.dailydev'`: Sets the application ID (package name) for the development flavor.
+    - `targetSdkVersion rootProject.ext.targetSdkVersion`: Sets the target SDK version for this flavor, which is retrieved from a variable defined in the root project's gradle.properties.
+    - `resValue "string", "build_config_package", "com.daily"`: This adds a resource value with the name "build_config_package" and the value "com.daily" to the flavor's resources.
+    - `resValue "string", "app_name" , "Daily Dev"`: This adds a resource value with the name "app_name" and the value "Daily Dev" to the flavor's resources.
+    - `versionCode project.env.get("BUILD_NUMBER").toInteger()`: Sets the version code for the development flavor, which is retrieved from an environment variable named "BUILD_NUMBER."
+    - `versionName project.env.get("APP_VERSION")`: Sets the version name for the development flavor, which is retrieved from an environment variable named "APP_VERSION."
+
+- **qa**: This flavor represents the QA testing environment. It has similar configurations to the dev flavor but with different values for the application ID and app name to distinguish it as the QA build.
+
+- **prod**: This flavor represents the production environment. It again shares similar configurations with the previous two flavors but with a unique application ID and app name to identify it as the production build.
+
+9. Once you update the app name in the ‘app.gradle’ file you need to comment or remove the app name from the res file located in "your project directory/android/app/src/main/res/values/strings.xml"
+
+   <div align="center">
+     <img width="777" alt="Screenshot 2023-07-31 at 10 46 45 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6e732727-efa0-4982-a11f-cab33ab59466">
+   </div>
+
+📱 **Manage Multiple Google-Services.Json configurations:**
+
+If you have multiple google-services.json files: you need to add following code after adding product flavors code in ‘build.gradle’ file as follows. This also needs to be inside the  ‘android{}’ section.
+
+   ```
+       // applicationVariants are e.g. debug, release
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    // For each separate APK per architecture, set a unique version code as described here:
+                    // https://developer.android.com/studio/build/configure-apk-splits.html
+                    // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
+                    def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
+                    def abi = output.getFilter(OutputFile.ABI)
+                    if (abi != null) {  // null for the universal-debug, universal-release variants
+                        output.versionCodeOverride =
+                                defaultConfig.versionCode * 1000 + versionCodes.get(abi)
+                    }
+                }
+            }
+   ```
+
+   <div align="center">
+         <img width="1201" alt="Screenshot 2023-07-31 at 10 52 07 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f79b85fa-35e3-4c15-b4ff-aa88b043701b">
+   </div>
