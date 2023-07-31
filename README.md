@@ -382,12 +382,12 @@ Yarn android:prod-release
 
 5. Update the bundle name for each schema.
 
-   - Select project name -> TARGETS -> App Name -> Build Settings -> search for word '**bundle**'.
+   - Select project name -> TARGETS -> App Name -> Build Settings -> search for word '**product name**'.
 
-   - This will give you something called ‘Info.plist Values’ inside that you can find the Bundle Display Name. You can select each schema name from the drop down and change the display name accordingly. This will be the app name that shows after installing.
+   - This will give you something called ‘Packaging’ inside that you can find the product names. Select each scheme name and give the appropriate product name for each. This will be the app display name once you install in a device.
 
      <div align="center">
-         <img width="1192" alt="Screenshot 2023-07-31 at 2 00 01 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/87d02f06-3c73-4823-9111-be702f8688c5">
+         <img width="1158" alt="Screenshot 2023-07-31 at 5 15 42 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/b0a98d7a-5a25-48d0-879e-7273e8a4ef61">
       </div>
  
 
