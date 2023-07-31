@@ -1,4 +1,4 @@
-🚀 **React Native Multiple Environment configuration (Android & IOS)**
+<img width="941" alt="Screenshot 2023-07-31 at 1 10 12 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/cf868325-1f87-49ed-8c0c-3a0e04272960">🚀 **React Native Multiple Environment configuration (Android & IOS)**
 
 Many times when developing an application, we developers need to create different builds with different configurations. Facilitating the maintenance and testing process. Usually 3 different builds are created: development, staging and production.  
 
@@ -264,7 +264,7 @@ Yarn android:prod-release
 
 1. First we need to add new build configurations.
 
-Select project name -> goto info tab -> select configurations.
+   *Select project name -> goto info tab -> select configurations.
 
    <div align="center">
       <img width="1150" alt="Screenshot 2023-07-31 at 12 51 48 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/ebe248e3-9973-4de6-8ff2-69d91bf79319">
@@ -274,5 +274,38 @@ Select project name -> goto info tab -> select configurations.
 
    <div align="center">
       <img width="725" alt="Screenshot 2023-07-31 at 12 57 14 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/5f2c0596-295e-4bf5-afdf-c304d7e1f4a6">
-      <img width="798" alt="Screenshot 2023-07-31 at 12 59 40 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/bdd3cada-d6a0-4f98-9202-afebba3ee4b3">
    </div>
+
+<div align="center">
+      <img width="798" alt="Screenshot 2023-07-31 at 12 59 40 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/bdd3cada-d6a0-4f98-9202-afebba3ee4b3">
+</div>
+      
+ 3. Next we need to create required schemes (dev, prod and qa).
+
+    a. Goto product -> scheme -> edit scheme.
+
+<div align="center">
+    <img width="1187" alt="Screenshot 2023-07-31 at 1 08 04 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/51bf8a8e-8c09-4ce8-9f99-fb9be0ad0ffc">
+</div>
+
+
+   b. The menu will be selected to your default scheme and you need to click on the duplicate scheme at the very bottom. This will duplicate your current scheme and you can configure this scheme by changing its name to desired (dev, prod and qa) also we need to update the Run and Archive configuration as described below.
+
+   <div align="center">
+      <img width="941" alt="Screenshot 2023-07-31 at 1 10 12 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/4ebee4d9-ca76-418a-8202-0c6a645ee212">
+   </div>
+
+
+   c. Just make sure that schema that you duplicate is “shared”  and has the right build configuration reference in Run and Archive .
+
+   <div align="center">
+      <img width="934" alt="Screenshot 2023-07-31 at 1 16 49 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/9554b789-406d-4dd8-8ec4-a3c06dc0c5f6">
+   </div>
+
+<div align="center">
+   <img width="943" alt="Screenshot 2023-07-31 at 1 23 58 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/66575181-3a64-44b2-9bc3-442b7962d722">
+</div>
+
+   
+
+   
