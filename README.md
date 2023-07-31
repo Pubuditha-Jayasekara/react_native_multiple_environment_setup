@@ -1,2 +1,4 @@
 # multiple_environment_setup
- Developers often create different builds (development, staging, production) with varied configurations. This guide provides examples for efficient build differentiation, optimizing workflow, and enhancing app quality.
+Many times when developing an application, we developers need to create different builds with different configurations. Facilitating the maintenance and testing process. Usually 3 different builds are created: development, staging and production.  
+
+This repository serves as a comprehensive guide, accompanied by illustrative examples, demonstrating how to efficiently achieve this build differentiation. By following this guide, developers can optimize their workflow and ensure smoother transitions between development stages while enhancing the overall quality of their applications.
