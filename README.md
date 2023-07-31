@@ -26,7 +26,7 @@ Have an existing React Native project ready. If you don't have one yet, create a
 
 You can find the package on GitHub [here](https://github.com/luggit/react-native-config). The react-native-config package allows you to efficiently manage environment-specific configurations in your React Native project, making it simpler to handle different builds with varying settings.
 
-3. Create separate “**.env**” files for desired environments in the project root directory. In mine I have '.env' for default configurations,‘**.env.dev**’ for **development configuration**, ‘**.env.prod**’ for **production configuration** and ‘**.env.qa**’ for **qa testing configurations**.
+3. Create separate “**.env**” files for desired environments in the project root directory. In mine I have '**.env**' for **default configurations**,‘**.env.dev**’ for **development configuration**, ‘**.env.prod**’ for **production configuration** and ‘**.env.qa**’ for **qa testing configurations**.
 
   * EX path for ‘.env.dev’ : projectName/.env.dev
    
@@ -41,7 +41,7 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
    BUILD_NUMBER=9
    ```
    <div align="center">
-      <img width="1013" alt="Screenshot 2023-07-31 at 10 11 18 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/17171cdd-e8fb-48cf-8d1c-908402c68593">
+       <img width="1440" alt="Screenshot 2023-07-31 at 11 29 00 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/4c184a57-c2bd-4f68-953e-b77ee017465c">
    </div>
 
 5. Go to the app level ‘build.gradle’ file in "/your project directory/android/app/build.gradle"
