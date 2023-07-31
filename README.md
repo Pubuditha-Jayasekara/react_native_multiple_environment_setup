@@ -294,6 +294,16 @@ Yarn android:prod-release
          <img width="766" alt="Screenshot 2023-07-31 at 2 55 07 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/922a1502-6aa6-4adf-b4a6-4e63adb9da6c">
       </div>
 
+     - Update your podfile by adding following code line.
+
+     ```
+     pod 'react-native-config', :path => '../node_modules/react-native-config'
+     ```
+
+     <div align="center">
+         <img width="783" alt="Screenshot 2023-07-31 at 5 26 02 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/72e8c6a6-5c79-471b-a6b9-a9dc153008c5">
+      </div>
+
 💻 **XCode Configuration:**
 
 1. First we need to add new build configurations.
