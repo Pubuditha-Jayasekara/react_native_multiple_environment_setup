@@ -144,7 +144,7 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
      <img width="777" alt="Screenshot 2023-07-31 at 10 46 45 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6e732727-efa0-4982-a11f-cab33ab59466">
    </div>
 
-📱 **Manage Multiple Google-Services.Json configurations:**
+📄 **Manage Multiple Google-Services.Json configurations:**
 
 If you have multiple google-services.json files: you need to add following code after adding product flavors code in ‘build.gradle’ file as follows. This also needs to be inside the  ‘android{}’ section.
 
