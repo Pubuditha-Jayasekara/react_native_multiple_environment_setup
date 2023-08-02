@@ -1,10 +1,10 @@
-🚀 **React Native Multiple Environment configuration (Android & IOS)**
+## 🚀 React Native Multiple Environment configuration (Android & IOS)
 
 Many times when developing an application, we developers need to create different builds with different configurations. Facilitating the maintenance and testing process. Usually 3 different builds are created: development, staging and production.  
 
 This repository serves as a comprehensive guide, accompanied by illustrative examples, demonstrating how to efficiently achieve this build differentiation. By following this guide, developers can optimize their workflow and ensure smoother transitions between development stages while enhancing the overall quality of their applications.
 
-🛠️ **Pre-Requisites for React Native Multiple Environment Configuration**
+## 🛠️ Pre-Requisites for React Native Multiple Environment Configuration
 
 Before you begin setting up multiple environment configurations in your React Native project, ensure you have the following pre-requisites in place:
 
@@ -16,7 +16,7 @@ Make sure you have a fully functional React Native development environment set u
 
 Have an existing React Native project ready. If you don't have one yet, create a new project using the React Native CLI.
 
-📱 **Android Configuration:**
+## 📱 Android Configuration:
 
 1. Install react-native-config package.
 
@@ -120,7 +120,7 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
       <img width="1123" alt="Screenshot 2023-07-31 at 10 39 22 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/14e30996-4882-45a3-a89f-7e92561c5c85">
    </div>
 
-🪚 **Let's break down the code:**
+#### 🪚 Let's break down the code:
 
 - **productFlavors**: This is a section that defines multiple product flavors, each representing a different environment configuration.
 
@@ -144,7 +144,7 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
      <img width="777" alt="Screenshot 2023-07-31 at 10 46 45 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/6e732727-efa0-4982-a11f-cab33ab59466">
    </div>
 
-🛎️ **Important**
+#### 🛎️ Important
 
 10. You have to provide a valid flavorDimensions once you add the productFlavors. To achive this you can place the following code inside buildTypes{} before the debug{} and release{} code segments.
 
@@ -157,7 +157,7 @@ You can find the package on GitHub [here](https://github.com/luggit/react-native
        <img width="804" alt="Screenshot 2023-07-31 at 11 23 09 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/a98853a1-2cff-4fd2-bf1b-a4972cf23fba">
    </div>
 
-📄 **Manage Multiple Google-Services.Json configurations:**
+#### 📄 Manage Multiple Google-Services.Json configurations:
 
 If you have multiple google-services.json files: you need to add following code after adding product flavors code in ‘build.gradle’ file as follows. This also needs to be inside the  ‘android{}’ section.
 
@@ -181,7 +181,7 @@ If you have multiple google-services.json files: you need to add following code 
       <img width="1275" alt="Screenshot 2023-07-31 at 11 37 28 AM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/f55535d4-d28f-43ab-a885-af80fb93ac2e">
    </div>
 
-🛎️ **Important**
+#### 🛎️ Important
 
 Once you update multiple google-service.json handling part in app.gradle, you need to update the android folder structure to match each json file for each environment like follows.
 
@@ -260,9 +260,9 @@ Yarn android:prod-release
    </div>
 
 
-📱 **iOS Configuration:**
+## 📱 iOS Configuration:
 
-📦 **react-native-config Package Configuration:**
+### 📦 react-native-config Package Configuration:
 
 1. Create Config.xconfig file in xcode project root.
 
@@ -304,7 +304,7 @@ Yarn android:prod-release
          <img width="783" alt="Screenshot 2023-07-31 at 5 26 02 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/72e8c6a6-5c79-471b-a6b9-a9dc153008c5">
       </div>
 
-💻 **XCode Configuration:**
+### 💻XCode Configuration:
 
 1. First we need to add new build configurations.
 
@@ -370,7 +370,7 @@ Yarn android:prod-release
   cp "${PROJECT_DIR}/../.env.prod" "${PROJECT_DIR}/../.env"
   ```
 
-🛎️ **Important**
+#### 🛎️ Important
 - It is required to set a valid target to the 'Provide build settings from' drop down menue. You can simply add your target name there.
 
     <div align="center">
