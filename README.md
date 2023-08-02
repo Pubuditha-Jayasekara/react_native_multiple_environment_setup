@@ -4,7 +4,7 @@ Many times when developing an application, we developers need to create differen
 
 This repository serves as a comprehensive guide, accompanied by illustrative examples, demonstrating how to efficiently achieve this build differentiation. By following this guide, developers can optimize their workflow and ensure smoother transitions between development stages while enhancing the overall quality of their applications.
 
-## 🛠️ Pre-Requisites for React Native Multiple Environment Configuration
+### 🛠️ Pre-Requisites for React Native Multiple Environment Configuration
 
 Before you begin setting up multiple environment configurations in your React Native project, ensure you have the following pre-requisites in place:
 
@@ -16,7 +16,7 @@ Make sure you have a fully functional React Native development environment set u
 
 Have an existing React Native project ready. If you don't have one yet, create a new project using the React Native CLI.
 
-## 📱 Android Configuration:
+### 📱 Android Configuration:
 
 1. Install react-native-config package.
 
@@ -260,7 +260,7 @@ Yarn android:prod-release
    </div>
 
 
-## 📱 iOS Configuration:
+### 📱 iOS Configuration:
 
 ### 📦 react-native-config Package Configuration:
 
