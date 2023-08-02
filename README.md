@@ -304,7 +304,7 @@ Yarn android:prod-release
          <img width="783" alt="Screenshot 2023-07-31 at 5 26 02 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/72e8c6a6-5c79-471b-a6b9-a9dc153008c5">
       </div>
 
-### 💻XCode Configuration:
+### 💻 XCode Configuration:
 
 1. First we need to add new build configurations.
 
