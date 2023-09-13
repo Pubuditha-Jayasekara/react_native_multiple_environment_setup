@@ -446,4 +446,25 @@ Yarn android:prod-release
 <div align="center">
  <img width="300" height="600" alt="Screenshot 2023-07-31 at 2 33 36 PM" src="https://github.com/Pubuditha-Jayasekara/multiple_environment_setup/assets/35820857/3c66c142-0bbe-4dbe-9321-5cd9f30479c0"/>
 </div>
+
+📄 Manage Multiple GoogleService-Info.plist configurations for IOS APP:
+
+1. Create a folder called '**FireBase**' in the project root and each GoogleService-Info.plist file for each product flavour. (make sure to rename the according to below image)
+   
+<div align="center">
+   <img width="501" alt="Screenshot 2023-09-13 at 6 34 23 AM" src="https://github.com/Pubuditha-Jayasekara/react_native_multiple_environment_setup/assets/35820857/5e5c1cee-b449-4671-a77e-013ba581d09e">
+</div>
+
+2. Also create an empty file called '**GoogleService-Info.plist**' in the project root at the same level of '**FireBase**' directory you created according to the above image. This helps you to prevent app crashing at very first running.
+
+3. You have to add following run script for each schema you have created before (make sure to rename each GoogleService-Info.plist file anme to match each flavours).
+
+   ```
+      cp "${PROJECT_DIR}/Firebase/GoogleService-Info-dev.plist" "${PROJECT_DIR}/GoogleService-Info.plist"
+   ```
+   
+<div align="center">
+   <img width="1030" alt="Screenshot 2023-09-13 at 6 43 30 AM" src="https://github.com/Pubuditha-Jayasekara/react_native_multiple_environment_setup/assets/35820857/a46b4d08-9447-4173-8e44-21e7a2563d97">
+</div>
     
+   
