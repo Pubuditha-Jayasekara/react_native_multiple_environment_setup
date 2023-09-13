@@ -449,13 +449,13 @@ Yarn android:prod-release
 
 📄 Manage Multiple GoogleService-Info.plist configurations for IOS APP:
 
-1. Create a folder called '**FireBase**' in the project root and each GoogleService-Info.plist file for each product flavour. (make sure to rename the according to below image)
+1. Create a folder called '**FireBase**' in the project root and add each GoogleService-Info.plist file for each product flavour. (make sure to rename them according to their flavour names as showen in the below image)
    
 <div align="center">
    <img width="501" alt="Screenshot 2023-09-13 at 6 34 23 AM" src="https://github.com/Pubuditha-Jayasekara/react_native_multiple_environment_setup/assets/35820857/5e5c1cee-b449-4671-a77e-013ba581d09e">
 </div>
 
-2. Also create an empty file called '**GoogleService-Info.plist**' in the project root at the same level of '**FireBase**' directory you created according to the above image. This helps you to prevent app crashing at very first running.
+2. Also create an empty file called '**GoogleService-Info.plist**' in the project root at the same level of '**Firebase**' directory you created according to the above image. This helps you to prevent app crashing at very first running.
 
 3. You have to add following run script for each schema you have created before (make sure to rename each GoogleService-Info.plist file anme to match each flavours).
 
